@@ -43,6 +43,16 @@ const groups: { title: string; items: LinkItem[] }[] = [
         description: 'Event recaps, member reflections, and Post updates.',
       },
       {
+        label: 'Events Calendar',
+        href: '/calendar',
+        description: 'Upcoming meetings, social mixers, ceremonies, and service days.',
+      },
+      {
+        label: 'Newsletter Sign-Up',
+        href: '/newsletter',
+        description: 'Subscribe to the Post 64 monthly newsletter.',
+      },
+      {
         label: 'Donate & Support',
         href: '/donate',
         description: 'Mail-in, online, in-kind, and planned giving.',
@@ -60,18 +70,6 @@ const groups: { title: string; items: LinkItem[] }[] = [
   {
     title: 'Coming Soon (links to current site)',
     items: [
-      {
-        label: 'Events Calendar',
-        href: postInfo.externalLinks.calendar,
-        external: true,
-        note: 'Phase 3 — porting calendar.',
-      },
-      {
-        label: 'Newsletter Sign-Up',
-        href: postInfo.externalLinks.wpHome,
-        external: true,
-        note: 'Phase 3 — newsletter integration.',
-      },
       {
         label: 'Contact Form',
         href: postInfo.externalLinks.contactWp,

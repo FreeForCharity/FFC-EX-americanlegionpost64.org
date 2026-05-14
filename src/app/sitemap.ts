@@ -12,6 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/leadership',
     '/history',
     '/news',
+    '/calendar',
+    '/newsletter',
     '/donate',
     '/ada-compliance',
     '/privacy-policy',

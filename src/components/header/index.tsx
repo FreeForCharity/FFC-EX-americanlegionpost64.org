@@ -23,8 +23,8 @@ const Header: React.FC = () => {
       { label: 'Home', path: '/' },
       { label: 'About', path: '/about' },
       { label: 'Leadership', path: '/leadership' },
-      { label: 'History', path: '/history' },
       { label: 'News', path: '/news' },
+      { label: 'Calendar', path: '/calendar' },
       { label: 'Donate', path: '/donate' },
     ],
     []
