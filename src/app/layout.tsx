@@ -19,21 +19,23 @@ import {
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ffcworkingsite1.org'),
+  metadataBase: new URL('https://staging.americanlegionpost64.org'),
   title: {
-    default: 'Free For Charity | Reduce Costs, Increase Impact',
-    template: '%s | Free For Charity',
+    default: 'American Legion Post 64 | Ahwatukee, Phoenix, AZ',
+    template: '%s | American Legion Post 64',
   },
   description:
-    'Free For Charity connects students, professionals, and businesses with nonprofits to reduce costs and increase revenues—putting more resources back into their missions.',
+    'American Legion Post 64 is Ahwatukee’s only local veterans’ organization — Veterans Helping Veterans while strengthening the community around us.',
   keywords: [
-    'nonprofit',
-    'charity',
-    'volunteer',
-    'donate',
-    'free hosting',
-    'domains',
-    'Microsoft 365',
+    'American Legion',
+    'Post 64',
+    'Ahwatukee',
+    'Phoenix',
+    'Arizona veterans',
+    'veterans organization',
+    'VA benefits',
+    'Be the One',
+    'veterans helping veterans',
   ],
   robots: {
     index: true,
@@ -51,26 +53,24 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    url: 'https://ffcworkingsite1.org/',
-    siteName: 'Free For Charity',
-    title: 'Free For Charity | Reduce Costs, Increase Impact',
+    url: 'https://staging.americanlegionpost64.org/',
+    siteName: 'American Legion Post 64',
+    title: 'American Legion Post 64 | Ahwatukee, Phoenix, AZ',
     description:
-      'Connecting students, professionals, and businesses with nonprofits to reduce costs and increase revenues.',
+      'Ahwatukee’s only local veterans’ organization. Veterans Helping Veterans since 1919.',
     images: [
       {
         url: '/web-app-manifest-512x512.png',
         width: 512,
         height: 512,
-        alt: 'Free For Charity',
+        alt: 'American Legion Post 64',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@freeforcharity',
-    title: 'Free For Charity | Reduce Costs, Increase Impact',
-    description:
-      'Connecting students, professionals, and businesses with nonprofits to reduce costs and increase revenues.',
+    title: 'American Legion Post 64 | Ahwatukee',
+    description: 'Veterans Helping Veterans while strengthening the community around us.',
     images: ['/web-app-manifest-512x512.png'],
   },
   icons: {
@@ -82,6 +82,7 @@ export const metadata: Metadata = {
   },
   manifest: `${basePath}/site.webmanifest`,
 }
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -90,24 +91,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Preconnect to external domains for faster resource loading */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://ffcsites.org" />
-        <link rel="preconnect" href="https://www.zeffy.com" />
-        <link rel="preconnect" href="https://widgets.guidestar.org" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://ffcsites.org" />
-        <link rel="dns-prefetch" href="https://www.zeffy.com" />
-        <link rel="dns-prefetch" href="https://www.idealist.org" />
-
-        {/* Preload critical LCP image */}
-        <link
-          rel="preload"
-          as="image"
-          href={`${basePath}/Images/figma-hero-img.webp`}
-          fetchPriority="high"
-        />
-
         <GoogleTagManager />
       </head>
       <body
@@ -125,13 +108,10 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <GoogleTagManagerNoScript />
-        {/* <PopupProvider> */}
         <Header />
         {children}
         <Footer />
         <CookieConsent />
-        {/* <PopupsRootClient /> */}
-        {/* </PopupProvider> */}
       </body>
     </html>
   )

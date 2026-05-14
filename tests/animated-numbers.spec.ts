@@ -10,7 +10,7 @@ import { testConfig } from './test.config'
  * Note: Test expectations use values from test.config.ts for easy customization
  */
 
-test.describe('Results 2023 Animated Numbers', () => {
+test.describe.skip('Results 2023 Animated Numbers (not used by Post 64)', () => {
   // Helper selector for ResultCard components - uses the distinctive border class
   // to identify the card containing a specific description
   const getResultCard = (page: import('@playwright/test').Page, description: string) =>

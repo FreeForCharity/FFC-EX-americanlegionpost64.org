@@ -30,37 +30,31 @@ describe('Header component', () => {
     expect(screen.getByRole('banner')).toBeInTheDocument()
   })
 
-  it('should display the Free For Charity logo', () => {
+  it('should display the Post 64 wordmark', () => {
     render(<Header />)
-    // Check for logo image with alt text
-    expect(screen.getByAltText('Free For Charity')).toBeInTheDocument()
+    expect(screen.getByLabelText('American Legion Post 64 — Home')).toBeInTheDocument()
+    expect(screen.getByText('American Legion')).toBeInTheDocument()
+    expect(screen.getByText('Post 64 · Ahwatukee')).toBeInTheDocument()
   })
 
   it('should display Home navigation link', () => {
     render(<Header />)
-    // Home link should always be present in navigation
-    expect(screen.getByText('Home')).toBeInTheDocument()
+    const homeLinks = screen.getAllByText('Home')
+    expect(homeLinks.length).toBeGreaterThan(0)
   })
 
-  it('should have navigation links', () => {
+  it('should expose About, Leadership, History, and Donate routes', () => {
     render(<Header />)
-    // Check that navigation has at least some links
-    const links = screen.getAllByRole('link')
-    expect(links.length).toBeGreaterThan(0)
+    expect(screen.getAllByText('About').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('Leadership').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('History').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('Donate').length).toBeGreaterThan(0)
   })
 
   it('should have a mobile menu button', () => {
     render(<Header />)
-    // Look for the menu icon button
     const buttons = screen.getAllByRole('button')
     expect(buttons.length).toBeGreaterThan(0)
-  })
-
-  it('should have search functionality button', () => {
-    render(<Header />)
-    const buttons = screen.getAllByRole('button')
-    // Should have at least menu and search buttons
-    expect(buttons.length).toBeGreaterThanOrEqual(2)
   })
 
   it('should not have accessibility violations', async () => {

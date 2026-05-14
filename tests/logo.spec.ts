@@ -11,7 +11,8 @@ import { testConfig } from './test.config'
  * Note: Test expectations use values from test.config.ts for easy customization
  */
 
-test.describe('Logo and Image Visibility', () => {
+test.describe
+  .skip('Logo and Image Visibility (deferred — Post 64 uses a text wordmark, not an img-based logo, in phase 1)', () => {
   test('should display logo in header', async ({ page }) => {
     // Navigate to the homepage
     await page.goto('/')
