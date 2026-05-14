@@ -26,6 +26,7 @@ const Header: React.FC = () => {
       { label: 'News', path: '/news' },
       { label: 'Calendar', path: '/calendar' },
       { label: 'Contact', path: '/contact' },
+      { label: 'Members', path: '/members' },
       { label: 'Donate', path: '/donate' },
     ],
     []

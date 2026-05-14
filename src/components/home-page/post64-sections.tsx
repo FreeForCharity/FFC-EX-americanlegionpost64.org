@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Heart, Users, Calendar, Newspaper, Mail, Shield } from 'lucide-react'
+import { Heart, Shield } from 'lucide-react'
 import { postInfo } from '@/lib/post-info'
 
 export const MissionPreview: React.FC = () => (
@@ -140,83 +140,6 @@ export const DonateCTA: React.FC = () => (
       >
         Ways to Give
       </Link>
-    </div>
-  </section>
-)
-
-const comingSoonCards = [
-  {
-    icon: Newspaper,
-    title: 'Newsroom & Blog',
-    body: 'Post updates, event recaps, and stories from our members. Coming in a follow-up release.',
-    href: postInfo.externalLinks.newsroom,
-    external: true,
-    cta: 'Read on the current site',
-  },
-  {
-    icon: Calendar,
-    title: 'Events Calendar',
-    body: 'Meetings, ceremonies, community service days, and fundraisers. Coming in a follow-up release.',
-    href: postInfo.externalLinks.calendar,
-    external: true,
-    cta: 'View current calendar',
-  },
-  {
-    icon: Mail,
-    title: 'Newsletter Sign-Up',
-    body: 'Receive monthly updates from Post 64. Coming in a follow-up release.',
-    href: postInfo.externalLinks.wpHome,
-    external: true,
-    cta: 'Subscribe on the current site',
-  },
-  {
-    icon: Users,
-    title: 'Contact & Member Login',
-    body: 'Reach out to leadership or sign in to member resources. Coming in a follow-up release.',
-    href: postInfo.externalLinks.contactWp,
-    external: true,
-    cta: 'Use the current contact form',
-  },
-]
-
-export const ComingSoon: React.FC = () => (
-  <section className="bg-white py-16 md:py-24" aria-labelledby="coming-soon-heading">
-    <div className="mx-auto max-w-[1100px] px-6">
-      <div className="text-center mb-12">
-        <p
-          className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-2"
-          id="aria-font"
-        >
-          On the way
-        </p>
-        <h2 id="coming-soon-heading" className="text-3xl md:text-4xl font-bold text-[#0a2647]">
-          More features coming in future updates
-        </h2>
-        <p className="text-gray-700 mt-3 max-w-2xl mx-auto">
-          We&apos;re bringing this site over in phases. Until those features arrive here, the links
-          below take you to the existing pages.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {comingSoonCards.map(({ icon: Icon, title, body, href, cta }) => (
-          <article
-            key={title}
-            className="border border-gray-200 rounded-lg p-6 hover:border-[#c8a04a] hover:shadow-md transition-all"
-          >
-            <Icon className="w-8 h-8 text-[#b71c1c] mb-3" aria-hidden="true" />
-            <h3 className="font-bold text-[#0a2647] mb-2">{title}</h3>
-            <p className="text-sm text-gray-700 leading-relaxed mb-4">{body}</p>
-            <a
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-bold text-[#b71c1c] uppercase tracking-wide hover:underline"
-            >
-              {cta} →
-            </a>
-          </article>
-        ))}
-      </div>
     </div>
   </section>
 )

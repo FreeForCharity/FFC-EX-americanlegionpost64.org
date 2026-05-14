@@ -58,6 +58,11 @@ const groups: { title: string; items: LinkItem[] }[] = [
         description: 'Email or call Post 64 leadership directly.',
       },
       {
+        label: 'Members',
+        href: '/members',
+        description: 'Sign in, renew, or join through the national myLegion portal.',
+      },
+      {
         label: 'Donate & Support',
         href: '/donate',
         description: 'Mail-in, online, in-kind, and planned giving.',
@@ -73,17 +78,6 @@ const groups: { title: string; items: LinkItem[] }[] = [
     ],
   },
   {
-    title: 'Coming Soon (links to current site)',
-    items: [
-      {
-        label: 'Membership / Member Login',
-        href: postInfo.externalLinks.membership,
-        external: true,
-        note: 'Phase 5 — replacement plan in progress.',
-      },
-    ],
-  },
-  {
     title: 'External Resources',
     items: [
       {
@@ -94,6 +88,16 @@ const groups: { title: string; items: LinkItem[] }[] = [
       {
         label: 'Be the One Suicide-Prevention Campaign',
         href: postInfo.externalLinks.beTheOne,
+        external: true,
+      },
+      {
+        label: 'myLegion Member Portal',
+        href: 'https://www.legion.org/myLegion',
+        external: true,
+      },
+      {
+        label: 'Join the American Legion',
+        href: 'https://www.legion.org/join',
         external: true,
       },
     ],
