@@ -4,8 +4,8 @@ import {
   MissionPreview,
   LeadershipPreview,
   DonateCTA,
-  ComingSoon,
 } from '@/components/home-page/post64-sections'
+import LatestNews from '@/components/home-page/latest-news'
 
 const HomePage = () => {
   return (
@@ -13,8 +13,8 @@ const HomePage = () => {
       <Post64Hero />
       <MissionPreview />
       <LeadershipPreview />
+      <LatestNews />
       <DonateCTA />
-      <ComingSoon />
     </main>
   )
 }

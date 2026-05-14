@@ -38,6 +38,11 @@ const groups: { title: string; items: LinkItem[] }[] = [
         description: 'The American Legion since 1919, and Post 64 in Ahwatukee.',
       },
       {
+        label: 'Newsroom',
+        href: '/news',
+        description: 'Event recaps, member reflections, and Post updates.',
+      },
+      {
         label: 'Donate & Support',
         href: '/donate',
         description: 'Mail-in, online, in-kind, and planned giving.',
@@ -55,12 +60,6 @@ const groups: { title: string; items: LinkItem[] }[] = [
   {
     title: 'Coming Soon (links to current site)',
     items: [
-      {
-        label: 'Newsroom',
-        href: postInfo.externalLinks.newsroom,
-        external: true,
-        note: 'Phase 2 — porting news/blog as static pages.',
-      },
       {
         label: 'Events Calendar',
         href: postInfo.externalLinks.calendar,

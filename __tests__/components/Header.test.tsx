@@ -51,6 +51,11 @@ describe('Header component', () => {
     expect(screen.getAllByText('Donate').length).toBeGreaterThan(0)
   })
 
+  it('should expose the News route', () => {
+    render(<Header />)
+    expect(screen.getAllByText('News').length).toBeGreaterThan(0)
+  })
+
   it('should have a mobile menu button', () => {
     render(<Header />)
     const buttons = screen.getAllByRole('button')
