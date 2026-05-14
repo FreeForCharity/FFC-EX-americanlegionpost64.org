@@ -53,6 +53,11 @@ const groups: { title: string; items: LinkItem[] }[] = [
         description: 'Subscribe to the Post 64 monthly newsletter.',
       },
       {
+        label: 'Contact',
+        href: '/contact',
+        description: 'Email or call Post 64 leadership directly.',
+      },
+      {
         label: 'Donate & Support',
         href: '/donate',
         description: 'Mail-in, online, in-kind, and planned giving.',
@@ -70,12 +75,6 @@ const groups: { title: string; items: LinkItem[] }[] = [
   {
     title: 'Coming Soon (links to current site)',
     items: [
-      {
-        label: 'Contact Form',
-        href: postInfo.externalLinks.contactWp,
-        external: true,
-        note: 'Phase 4 — external form provider.',
-      },
       {
         label: 'Membership / Member Login',
         href: postInfo.externalLinks.membership,

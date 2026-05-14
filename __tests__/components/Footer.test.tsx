@@ -20,7 +20,8 @@ describe('Footer component', () => {
 
   it('should display Contact section with contact information', () => {
     render(<Footer />)
-    expect(screen.getByText('Contact')).toBeInTheDocument()
+    // "Contact" now appears as both the column heading and a quick-link entry.
+    expect(screen.getAllByText('Contact').length).toBeGreaterThan(0)
   })
 
   it('should have social media link(s)', () => {
