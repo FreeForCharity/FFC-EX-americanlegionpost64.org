@@ -2,41 +2,34 @@
 
 import React, { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { FiMenu } from 'react-icons/fi'
-import { LiaSearchSolid } from 'react-icons/lia'
 import { RxCross2 } from 'react-icons/rx'
 import { motion, AnimatePresence } from 'framer-motion'
+import { postInfo } from '@/lib/post-info'
 
 interface MenuItem {
   label: string
   path: string
+  external?: boolean
 }
-
-const SCROLL_OFFSET = 100
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState<string>('')
+  const pathname = usePathname()
 
   const menuItems: MenuItem[] = useMemo(
     () => [
-      { label: 'Home', path: '/#hero' },
-      { label: 'Mission', path: '/#mission' },
-      { label: 'Programs', path: '/#programs' },
-      { label: 'Volunteer', path: '/#volunteer' },
-      { label: 'Donate', path: '/#donate' },
-      { label: 'FAQ', path: '/#faq' },
-      { label: 'Team', path: '/#team' },
+      { label: 'Home', path: '/' },
+      { label: 'About', path: '/about' },
+      { label: 'Leadership', path: '/leadership' },
+      { label: 'History', path: '/history' },
+      { label: 'Donate', path: '/donate' },
+      { label: 'Newsroom', path: postInfo.externalLinks.newsroom, external: true },
+      { label: 'Membership', path: postInfo.externalLinks.membership, external: true },
     ],
     []
-  )
-
-  const sections = useMemo(
-    () =>
-      menuItems.map((item) => item.path.replace('/#', '')).filter((section) => section !== 'hero'),
-    [menuItems]
   )
 
   useEffect(() => {
@@ -45,133 +38,125 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Track active section based on scroll position
-  useEffect(() => {
-    const handleScrollSpy = () => {
-      const scrollPosition = window.scrollY + SCROLL_OFFSET
-
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId)
-        if (element) {
-          const offsetTop = element.offsetTop
-          const offsetBottom = offsetTop + element.offsetHeight
-          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
-            setActiveSection(sectionId)
-            return
-          }
-        }
-      }
-      // If at the top, set home as active
-      if (window.scrollY < SCROLL_OFFSET) {
-        setActiveSection('')
-      }
-    }
-
-    window.addEventListener('scroll', handleScrollSpy)
-    return () => window.removeEventListener('scroll', handleScrollSpy)
-  }, [sections])
-
-  const handleSearchToggle = () => setIsSearchOpen(!isSearchOpen)
-  const handleLinkClick = () => {
-    setIsMobileMenuOpen(false)
-  }
+  const handleLinkClick = () => setIsMobileMenuOpen(false)
 
   const isActive = (path: string) => {
-    const sectionId = path.replace('/#', '')
-    if (sectionId === 'hero') return activeSection === ''
-    return activeSection === sectionId
+    if (path === '/') return pathname === '/'
+    return pathname === path || pathname.startsWith(`${path}/`)
   }
 
   return (
     <header
       id="header"
-      className={`w-full bg-white shadow-sm fixed top-0 left-0 right-0 z-50 flex items-center transition-all duration-300 ${
-        isScrolled ? 'h-[55px]' : 'h-[80px]'
+      className={`w-full bg-[#0a2647] text-white shadow-md fixed top-0 left-0 right-0 z-50 flex items-center transition-all duration-300 ${
+        isScrolled ? 'h-[60px]' : 'h-[88px]'
       }`}
     >
       <div className="w-full">
-        <div className="mx-auto max-w-[1080px]">
-          <div className="flex items-center px-2 transition-all duration-300">
-            {/* Logo */}
-            <div
-              className={`transition-all duration-300 ${isScrolled ? 'w-[110px]' : 'w-[150px]'}`}
+        <div className="mx-auto max-w-[1200px]">
+          <div className="flex items-center px-4 transition-all duration-300">
+            {/* Logo / Wordmark */}
+            <Link
+              href="/"
+              onClick={handleLinkClick}
+              className="block flex-shrink-0"
+              aria-label="American Legion Post 64 — Home"
             >
-              <Link href="/" onClick={handleLinkClick} className="block">
-                <img
-                  src="https://freeforcharity.org/wp-content/uploads/2024/04/Screenshot_145.png"
-                  alt="Free For Charity"
-                  className={`transition-all duration-300 ${isScrolled ? 'h-7' : 'h-11'}`}
-                />
-              </Link>
-            </div>
+              <div
+                className={`flex items-center gap-3 transition-all duration-300 ${
+                  isScrolled ? 'h-10' : 'h-14'
+                }`}
+              >
+                <span
+                  className={`inline-flex items-center justify-center rounded-full bg-[#c8a04a] text-[#0a2647] font-[700] transition-all duration-300 ${
+                    isScrolled ? 'w-9 h-9 text-sm' : 'w-12 h-12 text-base'
+                  }`}
+                  aria-hidden="true"
+                >
+                  64
+                </span>
+                <span className="flex flex-col leading-tight">
+                  <span
+                    className={`font-[700] uppercase tracking-wide transition-all duration-300 ${
+                      isScrolled ? 'text-[13px]' : 'text-[15px]'
+                    }`}
+                    id="cinzel"
+                  >
+                    American Legion
+                  </span>
+                  <span
+                    className={`text-[#c8a04a] transition-all duration-300 ${
+                      isScrolled ? 'text-[11px]' : 'text-[13px]'
+                    }`}
+                    id="aria-font"
+                  >
+                    Post 64 · Ahwatukee
+                  </span>
+                </span>
+              </div>
+            </Link>
 
-            {/* Menu or Search */}
-            {!isSearchOpen ? (
-              <div className="flex items-center justify-end sm:pl-[50px] md:pl-[70px] w-full">
-                {/* Desktop Menu */}
-                <nav className="hidden lg:block transition-all duration-300">
-                  <ul className="flex items-center space-x-[1px] font-navbar font-[600]">
-                    {menuItems.map((item, index) => (
-                      <li key={index} className="relative py-6">
+            <div className="flex items-center justify-end ml-auto w-full">
+              {/* Desktop Menu */}
+              <nav
+                className="hidden lg:block transition-all duration-300"
+                aria-label="Primary navigation"
+              >
+                <ul className="flex items-center space-x-1 font-[600]">
+                  {menuItems.map((item) => (
+                    <li key={item.label} className="relative">
+                      {item.external ? (
+                        <a
+                          href={item.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center px-3 py-2 text-[14px] text-white hover:text-[#c8a04a] transition-colors"
+                        >
+                          {item.label}
+                        </a>
+                      ) : (
                         <Link
                           href={item.path}
                           onClick={handleLinkClick}
-                          className={`flex items-center px-3 py-2 text-[14px] transition-colors duration-200 ${
+                          aria-current={isActive(item.path) ? 'page' : undefined}
+                          className={`flex items-center px-3 py-2 text-[14px] transition-colors ${
                             isActive(item.path)
-                              ? 'text-blue-600'
-                              : 'text-gray-600 hover:text-gray-500'
+                              ? 'text-[#c8a04a] border-b-2 border-[#c8a04a]'
+                              : 'text-white hover:text-[#c8a04a]'
                           }`}
                         >
                           {item.label}
                         </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
+                      )}
+                    </li>
+                  ))}
+                  <li className="ml-2">
+                    <Link
+                      href="/donate"
+                      onClick={handleLinkClick}
+                      className="inline-flex items-center px-5 py-2 rounded-full bg-[#b71c1c] hover:bg-[#9b1414] text-white text-[14px] font-[700] uppercase tracking-wide transition-colors"
+                    >
+                      Support Our Veterans
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
 
-                {/* Search Icon */}
-                <div className="hidden lg:flex items-center">
-                  <button
-                    onClick={handleSearchToggle}
-                    className="p-2 text-gray-600 hover:text-blue-600 transition-colors"
-                    aria-label="Search"
-                  >
-                    <LiaSearchSolid className="h-5 w-5 cursor-pointer" />
-                  </button>
-                </div>
-
-                {/* Mobile Menu Button */}
-                <button
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="lg:hidden p-2 text-gray-600 hover:text-blue-600"
-                  aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
-                >
-                  {isMobileMenuOpen ? (
-                    <RxCross2 className="h-6 w-6" />
-                  ) : (
-                    <FiMenu className="h-6 w-6" />
-                  )}
-                </button>
-              </div>
-            ) : (
-              // Search Input
-              <div className="w-full max-w-[750px] ml-auto flex items-center justify-between transition-all duration-300">
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  className="w-full px-4 py-2 focus:outline-none"
-                  autoFocus
-                  aria-label="Search input"
-                />
-                <button
-                  onClick={handleSearchToggle}
-                  className="ml-2 p-2 text-gray-600"
-                  aria-label="Close search"
-                >
-                  <RxCross2 className="cursor-pointer h-5 w-5" />
-                </button>
-              </div>
-            )}
+              {/* Mobile Menu Button */}
+              <button
+                type="button"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2 text-white hover:text-[#c8a04a]"
+                aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+                aria-expanded={isMobileMenuOpen ? 'true' : 'false'}
+              >
+                {isMobileMenuOpen ? (
+                  <RxCross2 className="h-6 w-6" />
+                ) : (
+                  <FiMenu className="h-6 w-6" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -183,30 +168,49 @@ const Header: React.FC = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
             className={`lg:hidden absolute left-0 w-full overflow-hidden z-40 ${
-              isScrolled ? 'top-[53px]' : 'top-[77px]'
+              isScrolled ? 'top-[58px]' : 'top-[86px]'
             }`}
           >
-            <div
-              className={`max-w-[700px] mx-auto px-6 py-4 bg-white border-t-[3px] border-[#2EA3F2] shadow-[0_2px_5px_rgba(0,0,0,0.1)] max-h-[80vh] overflow-auto`}
-            >
-              <ul className="space-y-2">
-                {menuItems.map((item, index) => (
-                  <li key={index}>
-                    <Link
-                      href={item.path}
-                      onClick={handleLinkClick}
-                      className={`block px-4 py-2 rounded-lg text-sm font-[600] ${
-                        isActive(item.path)
-                          ? 'bg-blue-50 text-blue-600'
-                          : 'text-gray-700 hover:bg-gray-100'
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
+            <div className="mx-auto px-6 py-4 bg-[#0a2647] border-t-2 border-[#c8a04a] shadow-lg max-h-[80vh] overflow-auto">
+              <ul className="space-y-1">
+                {menuItems.map((item) => (
+                  <li key={item.label}>
+                    {item.external ? (
+                      <a
+                        href={item.path}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={handleLinkClick}
+                        className="block px-4 py-2 rounded text-sm font-[600] text-white hover:bg-[#0e3a6f]"
+                      >
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={item.path}
+                        onClick={handleLinkClick}
+                        className={`block px-4 py-2 rounded text-sm font-[600] ${
+                          isActive(item.path)
+                            ? 'bg-[#0e3a6f] text-[#c8a04a]'
+                            : 'text-white hover:bg-[#0e3a6f]'
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
+                <li>
+                  <Link
+                    href="/donate"
+                    onClick={handleLinkClick}
+                    className="block px-4 py-2 mt-2 rounded bg-[#b71c1c] hover:bg-[#9b1414] text-white text-sm font-[700] uppercase tracking-wide text-center"
+                  >
+                    Support Our Veterans
+                  </Link>
+                </li>
               </ul>
             </div>
           </motion.div>
