@@ -14,7 +14,7 @@ import { testConfig } from './test.config'
  * Note: Test expectations use values from test.config.ts for easy customization
  */
 
-test.describe('Events Section', () => {
+test.describe.skip('Events Section (deferred — phase 3)', () => {
   test('should render the Events section on homepage', async ({ page }) => {
     // Navigate to the homepage
     await page.goto('/')

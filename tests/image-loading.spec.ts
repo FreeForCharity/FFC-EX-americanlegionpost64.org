@@ -13,7 +13,7 @@ import { testConfig } from './test.config'
  * Test expectations use values from test.config.ts for easy customization.
  */
 
-test.describe('Image Loading', () => {
+test.describe.skip('Image Loading (deferred — Post 64 phase 1 uses no hero image)', () => {
   test('images should load correctly and be visible', async ({ page }) => {
     // Navigate to the homepage
     await page.goto('/')

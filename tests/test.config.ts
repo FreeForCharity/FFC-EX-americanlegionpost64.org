@@ -1,40 +1,34 @@
 /**
- * Test Configuration for Template Customization
+ * Test Configuration for American Legion Post 64
  *
  * This file contains all content-specific values used in E2E tests.
- * When customizing this template for a new organization, update these
- * values to match your content instead of modifying individual test files.
- *
- * This makes it easy to:
- * 1. Identify what needs to change when using the template
- * 2. Keep tests working with customized content
- * 3. Maintain a single source of truth for test expectations
+ * Updated for the Post 64 site from the FFC template defaults.
  */
 
 export const testConfig = {
   /**
    * Mission Video Configuration
-   * Used in: tests/mission-video.spec.ts
+   * Used in: tests/mission-video.spec.ts (skipped — Post 64 has no mission video in phase 1)
    */
   missionVideo: {
-    ariaLabel: 'Free For Charity mission video',
-    title: "Learn about Free For Charity's mission to help nonprofits reduce costs",
+    ariaLabel: 'American Legion Post 64 mission video',
+    title: 'American Legion Post 64 mission',
   },
 
   /**
    * Application Form Configuration
-   * Used in: tests/application-form.spec.ts
+   * Used in: tests/application-form.spec.ts (skipped — no application form in phase 1)
    */
   applicationForm: {
-    buttonText: 'Apply to Become a Supported Charity',
-    modalTitle: 'Charity Application Form',
+    buttonText: 'Apply',
+    modalTitle: 'Application Form',
     loadingText: 'Loading application form...',
     closeButtonAriaLabel: 'Close application form',
   },
 
   /**
    * Events Section Configuration
-   * Used in: tests/events.spec.ts
+   * Used in: tests/events.spec.ts (skipped — events come in phase 3)
    */
   events: {
     sectionId: 'events',
@@ -42,8 +36,8 @@ export const testConfig = {
     footerLinkText: 'Events',
     iframeTitle: 'Facebook Events',
     facebookLinkText: 'View all events on Facebook',
-    facebookUrl: 'https://www.facebook.com/freeforcharity',
-    descriptionText: 'volunteer opportunities',
+    facebookUrl: 'https://www.facebook.com/',
+    descriptionText: 'events',
   },
 
   /**
@@ -52,20 +46,20 @@ export const testConfig = {
    */
   socialLinks: {
     facebook: {
-      url: 'facebook.com/freeforcharity',
+      url: 'facebook.com',
       ariaLabel: 'Facebook',
     },
     twitter: {
-      url: 'x.com/freeforcharity1',
-      ariaLabel: 'X (Twitter)',
+      url: '',
+      ariaLabel: '',
     },
     linkedin: {
-      url: 'linkedin.com/company/freeforcharity',
-      ariaLabel: 'LinkedIn',
+      url: '',
+      ariaLabel: '',
     },
     github: {
-      url: 'github.com/FreeForCharity/FFC_Single_Page_Template',
-      ariaLabel: 'GitHub',
+      url: '',
+      ariaLabel: '',
     },
   },
 
@@ -74,27 +68,19 @@ export const testConfig = {
    * Used in: tests/copyright.spec.ts
    */
   copyright: {
-    text: 'All Rights Are Reserved by Free For Charity a US 501c3 Non Profit',
-    searchText: 'All Rights Are Reserved',
+    text: 'American Legion Post 64',
+    searchText: 'American Legion Post 64',
     linkUrl: 'https://freeforcharity.org',
-    linkText: 'https://freeforcharity.org',
+    linkText: 'Free For Charity',
   },
 
   /**
    * Animated Numbers Configuration
-   * Used in: tests/animated-numbers.spec.ts
+   * Used in: tests/animated-numbers.spec.ts (skipped — no stats section in phase 1)
    */
   animatedNumbers: {
-    sectionHeading: 'Results - 2023',
-    statistics: [
-      { description: 'Organizational partners', value: '221' },
-      { description: 'Total volunteers', value: '3' },
-      {
-        description: 'Organizations accessing technical assistance offerings',
-        value: '221',
-      },
-      { description: 'Volunteer hours contributed to the organization', value: '25' },
-    ],
+    sectionHeading: '',
+    statistics: [],
   },
 
   /**
@@ -110,9 +96,9 @@ export const testConfig = {
    * Used in: tests/logo.spec.ts
    */
   logo: {
-    headerAlt: 'Free For Charity',
-    heroAlt: 'Hero image',
-    navBarAriaLabel: 'Free For Charity home',
+    headerAlt: 'American Legion Post 64 — Home',
+    heroAlt: '',
+    navBarAriaLabel: 'American Legion Post 64 home',
   },
 
   /**

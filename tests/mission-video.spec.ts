@@ -10,7 +10,7 @@ import { testConfig } from './test.config'
  * Note: Test expectations use values from test.config.ts for easy customization
  */
 
-test.describe('Mission Video', () => {
+test.describe.skip('Mission Video (deferred — phase 2+)', () => {
   test('should display video in mission section', async ({ page }) => {
     // Navigate to the homepage
     await page.goto('/')
