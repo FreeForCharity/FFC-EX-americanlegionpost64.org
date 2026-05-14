@@ -14,6 +14,11 @@ const Footer: React.FC = () => {
     { name: 'About Post 64', href: '/about' },
     { name: 'Leadership', href: '/leadership' },
     { name: 'History', href: '/history' },
+    { name: 'News', href: '/news' },
+    { name: 'Calendar', href: '/calendar' },
+    { name: 'Newsletter', href: '/newsletter' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Members', href: '/members' },
     { name: 'Donate', href: '/donate' },
     { name: 'Sitemap', href: '/sitemap' },
   ]
@@ -24,11 +29,9 @@ const Footer: React.FC = () => {
   ]
 
   const externalLinks = [
-    { name: 'Newsroom', href: postInfo.externalLinks.newsroom },
-    { name: 'Membership', href: postInfo.externalLinks.membership },
-    { name: 'Contact (current site)', href: postInfo.externalLinks.contactWp },
     { name: 'The American Legion (national)', href: postInfo.externalLinks.nationalLegion },
     { name: 'Be the One Campaign', href: postInfo.externalLinks.beTheOne },
+    { name: 'myLegion Member Portal', href: 'https://www.legion.org/myLegion' },
   ]
 
   return (

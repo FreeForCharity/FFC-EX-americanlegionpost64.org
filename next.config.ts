@@ -2,6 +2,8 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   output: 'export',
+  // Generate trailing-slash URLs so GitHub Pages serves /route/index.html correctly
+  trailingSlash: true,
   // Images configuration
   images: {
     // This allows all images, local or external, to load without optimization

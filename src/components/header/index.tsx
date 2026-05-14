@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation'
 import { FiMenu } from 'react-icons/fi'
 import { RxCross2 } from 'react-icons/rx'
 import { motion, AnimatePresence } from 'framer-motion'
-import { postInfo } from '@/lib/post-info'
 
 interface MenuItem {
   label: string
@@ -24,10 +23,11 @@ const Header: React.FC = () => {
       { label: 'Home', path: '/' },
       { label: 'About', path: '/about' },
       { label: 'Leadership', path: '/leadership' },
-      { label: 'History', path: '/history' },
+      { label: 'News', path: '/news' },
+      { label: 'Calendar', path: '/calendar' },
+      { label: 'Contact', path: '/contact' },
+      { label: 'Members', path: '/members' },
       { label: 'Donate', path: '/donate' },
-      { label: 'Newsroom', path: postInfo.externalLinks.newsroom, external: true },
-      { label: 'Membership', path: postInfo.externalLinks.membership, external: true },
     ],
     []
   )

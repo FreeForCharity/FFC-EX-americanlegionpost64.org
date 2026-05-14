@@ -38,6 +38,31 @@ const groups: { title: string; items: LinkItem[] }[] = [
         description: 'The American Legion since 1919, and Post 64 in Ahwatukee.',
       },
       {
+        label: 'Newsroom',
+        href: '/news',
+        description: 'Event recaps, member reflections, and Post updates.',
+      },
+      {
+        label: 'Events Calendar',
+        href: '/calendar',
+        description: 'Upcoming meetings, social mixers, ceremonies, and service days.',
+      },
+      {
+        label: 'Newsletter Sign-Up',
+        href: '/newsletter',
+        description: 'Subscribe to the Post 64 monthly newsletter.',
+      },
+      {
+        label: 'Contact',
+        href: '/contact',
+        description: 'Email or call Post 64 leadership directly.',
+      },
+      {
+        label: 'Members',
+        href: '/members',
+        description: 'Sign in, renew, or join through the national myLegion portal.',
+      },
+      {
         label: 'Donate & Support',
         href: '/donate',
         description: 'Mail-in, online, in-kind, and planned giving.',
@@ -53,41 +78,6 @@ const groups: { title: string; items: LinkItem[] }[] = [
     ],
   },
   {
-    title: 'Coming Soon (links to current site)',
-    items: [
-      {
-        label: 'Newsroom',
-        href: postInfo.externalLinks.newsroom,
-        external: true,
-        note: 'Phase 2 — porting news/blog as static pages.',
-      },
-      {
-        label: 'Events Calendar',
-        href: postInfo.externalLinks.calendar,
-        external: true,
-        note: 'Phase 3 — porting calendar.',
-      },
-      {
-        label: 'Newsletter Sign-Up',
-        href: postInfo.externalLinks.wpHome,
-        external: true,
-        note: 'Phase 3 — newsletter integration.',
-      },
-      {
-        label: 'Contact Form',
-        href: postInfo.externalLinks.contactWp,
-        external: true,
-        note: 'Phase 4 — external form provider.',
-      },
-      {
-        label: 'Membership / Member Login',
-        href: postInfo.externalLinks.membership,
-        external: true,
-        note: 'Phase 5 — replacement plan in progress.',
-      },
-    ],
-  },
-  {
     title: 'External Resources',
     items: [
       {
@@ -98,6 +88,16 @@ const groups: { title: string; items: LinkItem[] }[] = [
       {
         label: 'Be the One Suicide-Prevention Campaign',
         href: postInfo.externalLinks.beTheOne,
+        external: true,
+      },
+      {
+        label: 'myLegion Member Portal',
+        href: 'https://www.legion.org/myLegion',
+        external: true,
+      },
+      {
+        label: 'Join the American Legion',
+        href: 'https://www.legion.org/join',
         external: true,
       },
     ],

@@ -43,12 +43,19 @@ describe('Header component', () => {
     expect(homeLinks.length).toBeGreaterThan(0)
   })
 
-  it('should expose About, Leadership, History, and Donate routes', () => {
+  it('should expose About, Leadership, and Donate routes', () => {
     render(<Header />)
     expect(screen.getAllByText('About').length).toBeGreaterThan(0)
     expect(screen.getAllByText('Leadership').length).toBeGreaterThan(0)
-    expect(screen.getAllByText('History').length).toBeGreaterThan(0)
     expect(screen.getAllByText('Donate').length).toBeGreaterThan(0)
+  })
+
+  it('should expose News, Calendar, Contact, and Members routes', () => {
+    render(<Header />)
+    expect(screen.getAllByText('News').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('Calendar').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('Contact').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('Members').length).toBeGreaterThan(0)
   })
 
   it('should have a mobile menu button', () => {
