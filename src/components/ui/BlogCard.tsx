@@ -54,12 +54,8 @@ const InfoCard: React.FC<InfoCardProps> = ({ imageUrl, heading, date, descriptio
             heading
           )}
         </h3>
-        {date && (
-          <p id="aria-font" className="text-[14px] font-[600] text-[#f27022] my-2">
-            {date}
-          </p>
-        )}
-        <p id="lato-font" className="text-[#666666] font-[500] text-[18px] leading-relaxed">
+        {date && <p className="aria-font text-[14px] font-[600] text-[#f27022] my-2">{date}</p>}
+        <p className="lato-font text-[#666666] font-[500] text-[18px] leading-relaxed">
           {description}
         </p>
       </div>

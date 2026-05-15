@@ -77,10 +77,7 @@ export default function CalendarPage() {
                   className="border border-gray-200 rounded-lg p-6 hover:border-[#c8a04a] hover:shadow-md transition-all"
                 >
                   {event.category ? (
-                    <p
-                      className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-2"
-                      id="aria-font"
-                    >
+                    <p className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-2 aria-font">
                       {event.category}
                     </p>
                   ) : null}

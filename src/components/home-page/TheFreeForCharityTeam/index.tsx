@@ -4,10 +4,7 @@ import TeamMemberCard from '@/components/ui/TeamMemberCard'
 const index = () => {
   return (
     <div id="team" className="py-[50px]">
-      <h1
-        className="font-[400] text-[40px] lg:text-[48px]  tracking-[0] text-center mx-auto mb-[50px]"
-        id="faustina-font"
-      >
+      <h1 className="font-[400] text-[40px] lg:text-[48px]  tracking-[0] text-center mx-auto mb-[50px] faustina-font">
         The Free For Charity Team
       </h1>
 

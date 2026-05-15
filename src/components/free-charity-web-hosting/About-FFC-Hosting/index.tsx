@@ -14,13 +14,10 @@ const index = () => {
           </div>
         </div>
         <div className="w-full md:w-[58.8%]">
-          <h1
-            className="mb-[12px] mt-[2px] pb-[10px] font-[700] text-[31px] leading-[31px] text-black text-center"
-            id="cantata-font"
-          >
+          <h1 className="mb-[12px] mt-[2px] pb-[10px] font-[700] text-[31px] leading-[31px] text-black text-center cantata-font">
             About FFC Hosting
           </h1>
-          <p className="text-[18px] font-[500] leading-[29px] text-center" id="raleway-font">
+          <p className="text-[18px] font-[500] leading-[29px] text-center raleway-font">
             FFCHosting is a project of Free For Charity. After seeing how small nonprofits were
             often unaware of the resources available to them as it related to technology and
             observing how charities were preyed upon while in the up to 18 months leading up to IRS

@@ -47,9 +47,7 @@ const Footer: React.FC = () => {
               64
             </span>
             <div>
-              <p className="font-[700] uppercase tracking-wide" id="cinzel">
-                American Legion
-              </p>
+              <p className="font-[700] uppercase tracking-wide cinzel">American Legion</p>
               <p className="text-[#c8a04a] text-sm">Post 64 · Ahwatukee</p>
             </div>
           </div>
@@ -72,9 +70,7 @@ const Footer: React.FC = () => {
 
         {/* Column 2: Quick Links */}
         <div className="space-y-4">
-          <h3 className="text-[18px] uppercase tracking-wide text-[#c8a04a]" id="cinzel">
-            Quick Links
-          </h3>
+          <h3 className="text-[18px] uppercase tracking-wide text-[#c8a04a] cinzel">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             {quickLinks.map((link) => (
               <li key={link.name}>
@@ -84,9 +80,7 @@ const Footer: React.FC = () => {
               </li>
             ))}
           </ul>
-          <h3 className="text-[18px] uppercase tracking-wide text-[#c8a04a] pt-2" id="cinzel">
-            Legal
-          </h3>
+          <h3 className="text-[18px] uppercase tracking-wide text-[#c8a04a] pt-2 cinzel">Legal</h3>
           <ul className="space-y-2 text-sm">
             {legalLinks.map((link) => (
               <li key={link.name}>
@@ -100,9 +94,7 @@ const Footer: React.FC = () => {
 
         {/* Column 3: External / In progress */}
         <div className="space-y-4">
-          <h3 className="text-[18px] uppercase tracking-wide text-[#c8a04a]" id="cinzel">
-            More
-          </h3>
+          <h3 className="text-[18px] uppercase tracking-wide text-[#c8a04a] cinzel">More</h3>
           <ul className="space-y-2 text-sm">
             {externalLinks.map((link) => (
               <li key={link.name}>
@@ -121,9 +113,7 @@ const Footer: React.FC = () => {
 
         {/* Column 4: Contact */}
         <div className="space-y-4">
-          <h3 className="text-[18px] uppercase tracking-wide text-[#c8a04a]" id="cinzel">
-            Contact
-          </h3>
+          <h3 className="text-[18px] uppercase tracking-wide text-[#c8a04a] cinzel">Contact</h3>
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
               postInfo.address.full

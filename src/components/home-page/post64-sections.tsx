@@ -11,10 +11,7 @@ export const MissionPreview: React.FC = () => (
   >
     <div className="mx-auto max-w-[1100px] px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
       <div className="md:col-span-1">
-        <p
-          className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-2"
-          id="aria-font"
-        >
+        <p className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-2 aria-font">
           About Post 64
         </p>
         <h2
@@ -65,10 +62,7 @@ export const LeadershipPreview: React.FC = () => (
   >
     <div className="mx-auto max-w-[1100px] px-6">
       <div className="text-center mb-12">
-        <p
-          className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-2"
-          id="aria-font"
-        >
+        <p className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-2 aria-font">
           Post Leadership
         </p>
         <h2
@@ -98,10 +92,7 @@ export const LeadershipPreview: React.FC = () => (
                   {initials}
                 </div>
                 <div>
-                  <p
-                    className="text-xs uppercase tracking-[0.2em] text-[#b71c1c] font-bold"
-                    id="aria-font"
-                  >
+                  <p className="text-xs uppercase tracking-[0.2em] text-[#b71c1c] font-bold aria-font">
                     {p.title}
                   </p>
                   <p className="text-xl font-bold text-[#0a2647] mt-0.5">{p.name}</p>

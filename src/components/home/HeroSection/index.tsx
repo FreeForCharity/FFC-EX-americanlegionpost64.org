@@ -10,10 +10,7 @@ const Hero: React.FC = () => {
           <h1 className="font-semibold text-[#f27022] text-[40px] leading-[50px] sm:text-[50px] sm:leading-[65px] md:text-[60px] md:leading-[78px]">
             Welcome to Free For Charity
           </h1>
-          <p
-            id="lato-font"
-            className="font-medium text-black text-[20px] leading-[30px] sm:text-[28px] sm:leading-[40px] md:text-[35px] md:leading-[49px] mt-4"
-          >
+          <p className="lato-font font-medium text-black text-[20px] leading-[30px] sm:text-[28px] sm:leading-[40px] md:text-[35px] md:leading-[49px] mt-4">
             Connecting Students, Professionals, & Businesses with Charities in Need
           </p>
         </div>

@@ -17,8 +17,7 @@ const GeneralDonationCard: React.FC<GeneralDonationCardProps> = ({
   return (
     <Link
       href={href}
-      className="block mx-auto bg-white p-6 rounded-[10px] overflow-hidden pt-[50px] pr-[20px] pb-[50px] pl-[20px] shadow-[0px_2px_18px_0px_rgba(0,0,0,0.3)]"
-      id="lato-font"
+      className="block mx-auto bg-white p-6 rounded-[10px] overflow-hidden pt-[50px] pr-[20px] pb-[50px] pl-[20px] shadow-[0px_2px_18px_0px_rgba(0,0,0,0.3)] lato-font"
     >
       {/* Title */}
       <h1 className="text-[30px] font-[700] leading-[30px] text-center pb-[10px]">{title}</h1>

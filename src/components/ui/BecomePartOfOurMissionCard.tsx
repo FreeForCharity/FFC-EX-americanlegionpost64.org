@@ -30,15 +30,9 @@ const BecomePartOfOurMissionCard: React.FC<BecomePartOfOurMissionCardProps> = ({
       }}
     >
       <div className="mb-[13px]">
-        <h1 className="pb-[10px] text-[31px] font-[700] leading-[31px]" id="cantata-font">
-          {heading}
-        </h1>
-        <p className="text-[18px] font-[500] leading-[32px]" id="raleway-font">
-          {description1}
-        </p>
-        <p className="text-[18px] font-[500] leading-[32px]" id="raleway-font">
-          {description2}
-        </p>
+        <h1 className="pb-[10px] text-[31px] font-[700] leading-[31px] cantata-font">{heading}</h1>
+        <p className="text-[18px] font-[500] leading-[32px] raleway-font">{description1}</p>
+        <p className="text-[18px] font-[500] leading-[32px] raleway-font">{description2}</p>
       </div>
 
       {/* Gradient Anchor with Hover Icon Animation */}
@@ -53,8 +47,7 @@ const BecomePartOfOurMissionCard: React.FC<BecomePartOfOurMissionCardProps> = ({
     flex items-center justify-center
     transition-all duration-300 ease-in-out
     hover:border-transparent hover:scale-x-110
-  "
-        id="aria-font"
+   aria-font"
       >
         <span className="z-10">{buttonText}</span>
 
