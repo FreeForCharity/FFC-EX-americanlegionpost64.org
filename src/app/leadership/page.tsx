@@ -23,33 +23,50 @@ export default function LeadershipPage() {
             Post Officers
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {postInfo.leadership.map((p) => (
-              <article
-                key={p.name}
-                className="bg-white border border-gray-200 border-t-4 border-t-[#b71c1c] rounded-lg p-6 shadow-sm"
-              >
-                <p
-                  className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold"
-                  id="aria-font"
+            {postInfo.leadership.map((p) => {
+              const initials = p.name
+                .split(' ')
+                .map((n) => n[0])
+                .slice(0, 2)
+                .join('')
+              return (
+                <article
+                  key={p.name}
+                  className="bg-white border border-gray-200 border-t-4 border-t-[#b71c1c] rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
                 >
-                  {p.title}
-                </p>
-                <p className="text-2xl font-bold text-[#0a2647] mt-1">{p.name}</p>
-                <dl className="mt-4 space-y-1 text-sm">
-                  <div>
-                    <dt className="sr-only">Phone</dt>
-                    <dd>
-                      <a
-                        href={`tel:${p.tel}`}
-                        className="text-[#0a2647] hover:text-[#b71c1c] font-semibold"
+                  <div className="flex items-center gap-4 mb-4">
+                    <div
+                      className="w-14 h-14 rounded-full bg-gradient-to-br from-[#0a2647] via-[#0e3a6f] to-[#102a4c] text-white flex items-center justify-center text-[20px] font-bold flex-shrink-0"
+                      aria-hidden="true"
+                    >
+                      {initials}
+                    </div>
+                    <div>
+                      <p
+                        className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold"
+                        id="aria-font"
                       >
-                        {p.phone}
-                      </a>
-                    </dd>
+                        {p.title}
+                      </p>
+                      <p className="text-xl font-bold text-[#0a2647] mt-0.5">{p.name}</p>
+                    </div>
                   </div>
-                </dl>
-              </article>
-            ))}
+                  <dl className="space-y-1 text-sm border-t border-gray-100 pt-3">
+                    <div>
+                      <dt className="sr-only">Phone</dt>
+                      <dd>
+                        <a
+                          href={`tel:${p.tel}`}
+                          className="text-[#0a2647] hover:text-[#b71c1c] font-semibold"
+                        >
+                          {p.phone}
+                        </a>
+                      </dd>
+                    </div>
+                  </dl>
+                </article>
+              )
+            })}
           </div>
         </section>
 

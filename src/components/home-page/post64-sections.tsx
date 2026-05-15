@@ -79,26 +79,43 @@ export const LeadershipPreview: React.FC = () => (
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-        {postInfo.leadership.map((p) => (
-          <div
-            key={p.name}
-            className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-[#b71c1c]"
-          >
-            <p
-              className="text-xs uppercase tracking-[0.2em] text-[#b71c1c] font-bold"
-              id="aria-font"
+        {postInfo.leadership.map((p) => {
+          const initials = p.name
+            .split(' ')
+            .map((n) => n[0])
+            .slice(0, 2)
+            .join('')
+          return (
+            <div
+              key={p.name}
+              className="bg-white p-6 rounded-lg shadow-sm border-t-4 border-[#b71c1c] hover:shadow-md transition-shadow"
             >
-              {p.title}
-            </p>
-            <p className="text-xl font-bold text-[#0a2647] mt-1">{p.name}</p>
-            <a
-              href={`tel:${p.tel}`}
-              className="inline-flex items-center gap-2 mt-3 text-[#0a2647] hover:text-[#b71c1c] font-semibold"
-            >
-              {p.phone}
-            </a>
-          </div>
-        ))}
+              <div className="flex items-center gap-3 mb-3">
+                <div
+                  className="w-12 h-12 rounded-full bg-gradient-to-br from-[#0a2647] via-[#0e3a6f] to-[#102a4c] text-white flex items-center justify-center text-[17px] font-bold flex-shrink-0"
+                  aria-hidden="true"
+                >
+                  {initials}
+                </div>
+                <div>
+                  <p
+                    className="text-xs uppercase tracking-[0.2em] text-[#b71c1c] font-bold"
+                    id="aria-font"
+                  >
+                    {p.title}
+                  </p>
+                  <p className="text-xl font-bold text-[#0a2647] mt-0.5">{p.name}</p>
+                </div>
+              </div>
+              <a
+                href={`tel:${p.tel}`}
+                className="inline-flex items-center gap-2 text-[#0a2647] hover:text-[#b71c1c] font-semibold text-sm"
+              >
+                {p.phone}
+              </a>
+            </div>
+          )
+        })}
       </div>
       <div className="text-center mt-10">
         <Link
@@ -120,10 +137,7 @@ export const DonateCTA: React.FC = () => (
   >
     <div
       aria-hidden="true"
-      className="absolute inset-0 opacity-10"
-      style={{
-        backgroundImage: 'repeating-linear-gradient(45deg, #c8a04a 0 2px, transparent 2px 24px)',
-      }}
+      className="absolute inset-0 opacity-10 [background-image:repeating-linear-gradient(45deg,#c8a04a_0_2px,transparent_2px_24px)]"
     />
     <div className="relative mx-auto max-w-[900px] px-6 text-center">
       <Heart className="w-12 h-12 mx-auto text-[#b71c1c] mb-4" aria-hidden="true" />
