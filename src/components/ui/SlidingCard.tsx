@@ -80,7 +80,7 @@ export default function SlidingCard({
             {subtitle}
           </h3>
 
-          <div className="text-[#333] text-[18px] leading-[24px] font-[500]" id="lato-font">
+          <div className="text-[#333] text-[18px] leading-[24px] font-[500] lato-font">
             {description}
           </div>
 
@@ -89,8 +89,7 @@ export default function SlidingCard({
             href={buttonLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative group inline-flex items-center justify-center gap-2 mt-[25px] px-[30px] py-[6px] text-white border border-[#f27022] rounded-[10px] text-[18px] bg-[#f27022] transition-all duration-300 ease-in-out shadow-md leading-[31px] font-[600] hover:shadow-[0px_12px_18px_-6px_#f27022]"
-            id="montserrat-font"
+            className="relative group inline-flex items-center justify-center gap-2 mt-[25px] px-[30px] py-[6px] text-white border border-[#f27022] rounded-[10px] text-[18px] bg-[#f27022] transition-all duration-300 ease-in-out shadow-md leading-[31px] font-[600] hover:shadow-[0px_12px_18px_-6px_#f27022] montserrat-font"
           >
             <span className="transition-all duration-300 group-hover:translate-x-1">
               {buttonText}

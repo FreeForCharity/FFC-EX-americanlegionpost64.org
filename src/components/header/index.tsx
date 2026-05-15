@@ -77,18 +77,16 @@ const Header: React.FC = () => {
                 </span>
                 <span className="flex flex-col leading-tight">
                   <span
-                    className={`font-[700] uppercase tracking-wide transition-all duration-300 ${
+                    className={`font-[700] uppercase tracking-wide transition-all duration-300 cinzel ${
                       isScrolled ? 'text-[13px]' : 'text-[15px]'
                     }`}
-                    id="cinzel"
                   >
                     American Legion
                   </span>
                   <span
-                    className={`text-[#c8a04a] transition-all duration-300 ${
+                    className={`text-[#c8a04a] transition-all duration-300 aria-font ${
                       isScrolled ? 'text-[11px]' : 'text-[13px]'
                     }`}
-                    id="aria-font"
                   >
                     Post 64 · Ahwatukee
                   </span>

@@ -40,8 +40,7 @@ const EducationalSitesCard: React.FC<EducationalSitesCardProps> = ({
             transition-all duration-300 ease-in-out
             shadow-md leading-[31px] font-[600]
             hover:shadow-[0px_12px_18px_-6px_#f27022] w-fit
-          "
-          id="montserrat-font"
+           montserrat-font"
         >
           <span className="transition-all duration-300 group-hover:translate-x-1">Check Here!</span>
           <IoIosArrowForward

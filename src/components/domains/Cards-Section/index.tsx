@@ -5,10 +5,7 @@ export default function CloudflareSetup() {
   return (
     <div className="pt-[20px]">
       <StepsCard title="Follow the following steps" id="orderstep1">
-        <ol
-          className="list-decimal list-inside text-left text-[20px] leading-[26px] font-[500]"
-          id="raleway-font"
-        >
+        <ol className="list-decimal list-inside text-left text-[20px] leading-[26px] font-[500] raleway-font">
           <li>
             Use your organizational outlook.com account
             <br />
@@ -45,7 +42,7 @@ export default function CloudflareSetup() {
 
       <StepsCard title="Follow the following steps" id="orderstep3">
         {/* Bullet List */}
-        <ul className="list-disc list-inside" id="raleway-font">
+        <ul className="list-disc list-inside raleway-font">
           <li>
             Select only a .org domain
             <ol className="list-lower-roman list-inside ml-6">

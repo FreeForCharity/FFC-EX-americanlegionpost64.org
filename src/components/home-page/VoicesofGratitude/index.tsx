@@ -43,10 +43,7 @@ export default function TestimonialSlider() {
   return (
     <>
       <div className="py-[30px]">
-        <h1
-          className="font-[400] text-[40px] lg:text-[48px]  tracking-[0] text-center mx-auto mb-[50px]"
-          id="faustina-font"
-        >
+        <h1 className="font-[400] text-[40px] lg:text-[48px]  tracking-[0] text-center mx-auto mb-[50px] faustina-font">
           Voices of Gratitude
         </h1>
         <div className="bg-[#2A6682] ">
@@ -70,7 +67,7 @@ export default function TestimonialSlider() {
                         }`}
                         style={{ minHeight: '200px' }}
                       >
-                        <p className="text-center font-[400] text-[28px] mb-3" id="fauna-font">
+                        <p className="text-center font-[400] text-[28px] mb-3 fauna-font">
                           {testimonial.name}
                         </p>
                         <div className="flex justify-center mb-3">
@@ -86,7 +83,7 @@ export default function TestimonialSlider() {
                           ))}
                         </div>
 
-                        <p className="text-center text-[21px] font-[400]" id="fauna-font">
+                        <p className="text-center text-[21px] font-[400] fauna-font">
                           {testimonial.text}
                         </p>
                       </div>

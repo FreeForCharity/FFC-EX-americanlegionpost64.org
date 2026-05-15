@@ -24,13 +24,10 @@ const Post64Hero: React.FC = () => {
 
       <div className="relative z-10 mx-auto max-w-[1200px] px-6 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 items-center">
         <div className="text-white">
-          <p
-            className="text-[#c8a04a] uppercase tracking-[0.25em] text-sm font-semibold mb-4"
-            id="aria-font"
-          >
+          <p className="text-[#c8a04a] uppercase tracking-[0.25em] text-sm font-semibold mb-4 aria-font">
             Ahwatukee · Phoenix · Arizona
           </p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6" id="cinzel">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 cinzel">
             Veterans Helping <span className="text-[#c8a04a]">Veterans</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-100 mb-8 max-w-2xl leading-relaxed">
@@ -60,10 +57,7 @@ const Post64Hero: React.FC = () => {
           className="relative bg-white/95 backdrop-blur-sm rounded-lg shadow-2xl p-8 border-t-4 border-[#b71c1c]"
           aria-label="Our mission"
         >
-          <p
-            className="uppercase text-[#0a2647] tracking-[0.2em] text-xs font-bold mb-3"
-            id="aria-font"
-          >
+          <p className="uppercase text-[#0a2647] tracking-[0.2em] text-xs font-bold mb-3 aria-font">
             Our Mission
           </p>
           <p className="text-[#0a2647] text-xl md:text-2xl leading-snug font-semibold mb-6">

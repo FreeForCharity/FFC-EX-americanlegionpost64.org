@@ -44,38 +44,38 @@ body {
 #header {
   font-family: var(--font-open-sans), sans-serif !important;
 }
-#aria-font {
+.aria-font {
   font-family: var(--font-open-sans), sans-serif !important;
 }
-#lato-font {
+.lato-font {
   font-family: var(--font-lato), sans-serif !important;
 }
-#montserrat-font {
+.montserrat-font {
   font-family: var(--font-montserrat), sans-serif !important;
 }
-#abeezee {
+.abeezee {
   font-family: var(--font-open-sans), sans-serif !important;
 }
 /* Segoe UI is a system font - use native system font stack for best performance (only used 2x) */
-#segoe-font {
+.segoe-font {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
 }
-#cinzel {
+.cinzel {
   font-family: var(--font-cinzel), serif !important;
 }
-#fauna-font {
+.fauna-font {
   font-family: var(--font-fauna-one), serif !important;
 }
-#cantata-font {
+.cantata-font {
   font-family: var(--font-cantata-one), serif !important;
 }
-#raleway-font {
+.raleway-font {
   font-family: var(--font-raleway), sans-serif !important;
 }
-#courier-font {
+.courier-font {
   font-family: ui-monospace, 'Courier New', monospace !important;
 }
-#faustina-font {
+.faustina-font {
   font-family: var(--font-faustina), serif !important;
 }
 

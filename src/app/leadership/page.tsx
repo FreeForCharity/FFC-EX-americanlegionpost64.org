@@ -42,10 +42,7 @@ export default function LeadershipPage() {
                       {initials}
                     </div>
                     <div>
-                      <p
-                        className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold"
-                        id="aria-font"
-                      >
+                      <p className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold aria-font">
                         {p.title}
                       </p>
                       <p className="text-xl font-bold text-[#0a2647] mt-0.5">{p.name}</p>

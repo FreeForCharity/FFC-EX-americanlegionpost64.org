@@ -21,10 +21,7 @@ export const LatestNews: React.FC = () => {
     >
       <div className="mx-auto max-w-[1100px] px-6">
         <div className="text-center mb-12">
-          <p
-            className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-2"
-            id="aria-font"
-          >
+          <p className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-2 aria-font">
             From the Newsroom
           </p>
           <h2 id="latest-news-heading" className="text-3xl md:text-4xl font-bold text-[#0a2647]">
@@ -57,10 +54,7 @@ export const LatestNews: React.FC = () => {
                 />
               )}
               <div className="p-5 flex flex-col flex-1">
-                <p
-                  className="uppercase text-[#b71c1c] tracking-[0.2em] text-[11px] font-bold mb-2"
-                  id="aria-font"
-                >
+                <p className="uppercase text-[#b71c1c] tracking-[0.2em] text-[11px] font-bold mb-2 aria-font">
                   <time dateTime={post.date}>{formatPostDate(post.date)}</time>
                 </p>
                 <h3 className="font-bold text-[#0a2647] mb-2 leading-snug">

@@ -7,10 +7,7 @@ const index = () => {
       <div className="py-[54px] ">
         <div className="">
           <div className="w-[80%] mx-auto pt-[27px] pb-[35px] ">
-            <h1
-              className="mb-[11px] pb-[10px] text-[40px] font-[700] leading-[44px] text-center text-[#333] tracking-[1px]"
-              id="faustina-font"
-            >
+            <h1 className="mb-[11px] pb-[10px] text-[40px] font-[700] leading-[44px] text-center text-[#333] tracking-[1px] faustina-font">
               Tools for <span className="text-[#e88d33]">Businesses</span>
             </h1>
             <div className="w-[18%] mx-auto h-[5px] bg-[#E88D33]"></div>

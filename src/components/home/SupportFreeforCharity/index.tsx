@@ -14,10 +14,7 @@ const SupportFreeForCharity: React.FC = () => {
             <h1 className="font-[700] text-[30px] md:text-[40px] leading-[44px] text-[#f27022] mb-4">
               SUPPORT FREE FOR CHARITY!
             </h1>
-            <p
-              className="w-full max-w-[650px] font-[500] text-[18px] leading-[27px] text-black"
-              id="montserrat-font"
-            >
+            <p className="w-full max-w-[650px] font-[500] text-[18px] leading-[27px] text-black montserrat-font">
               By donating you help drive our mission and allow us to support more charities with our
               Domain, Website, and other services.
             </p>
@@ -32,10 +29,7 @@ const SupportFreeForCharity: React.FC = () => {
         <div className="container max-w-[1100px] mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Card 1 */}
           <div>
-            <h1
-              className="text-center mb-10 font-[600] text-[18px] leading-[27px] text-black px-1"
-              id="montserrat-font"
-            >
+            <h1 className="text-center mb-10 font-[600] text-[18px] leading-[27px] text-black px-1 montserrat-font">
               LOOKING TO GET FREE SKILLS TRAINING AND HELP CHARITIES AT THE SAME TIME? START A
               TRAINING PROGRAM.
             </h1>
@@ -49,10 +43,7 @@ const SupportFreeForCharity: React.FC = () => {
 
           {/* Card 2 */}
           <div>
-            <h1
-              className="text-center mb-10 font-[600] text-[18px] leading-[27px] text-black px-1"
-              id="montserrat-font"
-            >
+            <h1 className="text-center mb-10 font-[600] text-[18px] leading-[27px] text-black px-1 montserrat-font">
               CHARITY IN NEED OF HELP? GET FREE SUPPORT WITH YOUR ONLINE AND OFFLINE CRITICAL
               PROJECTS.
             </h1>
@@ -66,10 +57,7 @@ const SupportFreeForCharity: React.FC = () => {
 
           {/* Card 3 */}
           <div>
-            <h1
-              className="text-center mb-10 font-[600] text-[18px] leading-[27px] text-black px-1"
-              id="montserrat-font"
-            >
+            <h1 className="text-center mb-10 font-[600] text-[18px] leading-[27px] text-black px-1 montserrat-font">
               ARE YOU A BUSINESS OR INDIVIDUAL LOOKING TO DONATE OR PARTNER WITH FREE FOR CHARITY?
             </h1>
             <TrainingCard

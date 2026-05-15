@@ -6,10 +6,7 @@ const index = () => {
     <div className="pb-[30px]">
       <div>
         <div className="w-[90%] md:w-[80%] mx-auto text-center pb-[54px]">
-          <h1
-            className="text-[22px] sm:text-[24px] md:text-[26px] font-medium text-[#333] pt-[22px]"
-            id="aria-font"
-          >
+          <h1 className="text-[22px] sm:text-[24px] md:text-[26px] font-medium text-[#333] pt-[22px] aria-font">
             Ready to Get Started Now?
           </h1>
 
@@ -27,16 +24,10 @@ const index = () => {
 
         <div className="py-[41px] ">
           <div className="pt-[24px] pb-[3px] w-[90%] md:w-[80%] mx-auto max-w-[1080px]">
-            <h1
-              className="mt-[2px] mb-[12px] pb-[10px] text-[30px] md:text-[35px] font-[700] leading-[46px] text-[#0d7ff8] text-center"
-              id="cantata-font"
-            >
+            <h1 className="mt-[2px] mb-[12px] pb-[10px] text-[30px] md:text-[35px] font-[700] leading-[46px] text-[#0d7ff8] text-center cantata-font">
               STEPS TO GET A NEW WEBSITE DESIGNED AND HOSTED
             </h1>
-            <p
-              className="mb-[13px] w-[85%] mx-auto font-[500] text-[20px] leading-[30px] text-center"
-              id="raleway-font"
-            >
+            <p className="mb-[13px] w-[85%] mx-auto font-[500] text-[20px] leading-[30px] text-center raleway-font">
               New site design has a backlog with Free for Charity but please reach out to get on the
               list for a new free charity website. We try to support 100 Charities a year. If you
               have your own design team and just need our hosting, plugins, and themes; follow the

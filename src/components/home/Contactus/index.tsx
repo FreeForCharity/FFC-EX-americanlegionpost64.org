@@ -30,8 +30,7 @@ const ContactUsSection: React.FC = () => {
             <p className="font-[600] text-[24px] text-black mb-2">Email</p>
             <a
               href={`mailto:${contact.email}`}
-              className="font-[600] text-[#2ea3f2] text-[18px]"
-              id="lato-font"
+              className="font-[600] text-[#2ea3f2] text-[18px] lato-font"
             >
               {contact.email}
             </a>
@@ -41,9 +40,7 @@ const ContactUsSection: React.FC = () => {
           <div className="w-full max-w-[550px]">
             <MdLocationOn className="w-[55px] h-[55px] text-[#2680A7] mx-auto mb-4" />
             <p className="font-[600] text-[24px] text-black mb-2">Main Address</p>
-            <p className="font-[600] text-[18px] text-[#666666]" id="lato-font">
-              {contact.mainAddress}
-            </p>
+            <p className="font-[600] text-[18px] text-[#666666] lato-font">{contact.mainAddress}</p>
           </div>
 
           {/* Phone */}
@@ -52,8 +49,7 @@ const ContactUsSection: React.FC = () => {
             <p className="font-[600] text-[24px] text-black mb-2">Call</p>
             <a
               href={`tel:${contact.phone.replace(/[^0-9]/g, '')}`}
-              className="font-[600] text-[#2ea3f2] text-[18px]"
-              id="lato-font"
+              className="font-[600] text-[#2ea3f2] text-[18px] lato-font"
             >
               {contact.phone}
             </a>
@@ -64,9 +60,7 @@ const ContactUsSection: React.FC = () => {
         <div className="w-full max-w-[550px] mx-auto">
           <MdLocationOn className="w-[55px] h-[55px] text-[#2680A7] mx-auto mb-4" />
           <p className="font-[600] text-[24px] text-black mb-2">PA Office Address</p>
-          <p className="font-[600] text-[18px] text-[#666666]" id="lato-font">
-            {contact.paAddress}
-          </p>
+          <p className="font-[600] text-[18px] text-[#666666] lato-font">{contact.paAddress}</p>
         </div>
       </div>
     </div>

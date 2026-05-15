@@ -10,10 +10,7 @@ const Index = () => {
       {/* Main content */}
       <div className="relative py-[27px] w-[90%] md:w-[80%] max-w-[1080px] mx-auto flex flex-col md:flex-row gap-[40px] md:gap-[0px] items-center z-[2]">
         <div className="w-full md:w-[48.5%] md:mr-[32px] text-[15px] leading-[1.6]">
-          <ul
-            className="list-disc pl-[20px] text-[17px] leading-[26px] font-[500] md:w-[85%] mx-auto "
-            id="raleway-font"
-          >
+          <ul className="list-disc pl-[20px] text-[17px] leading-[26px] font-[500] md:w-[85%] mx-auto  raleway-font">
             <li>
               Go to{' '}
               <a

@@ -5,10 +5,7 @@ const index = () => {
   return (
     <div className="py-[20px]">
       <div className="w-[90%] md:w-[80%] mx-auto text-center">
-        <h1
-          className="text-[22px] sm:text-[24px] md:text-[26px] font-medium text-[#333] pb-[10px]"
-          id="aria-font"
-        >
+        <h1 className="text-[22px] sm:text-[24px] md:text-[26px] font-medium text-[#333] pb-[10px] aria-font">
           Ready to Get Started Now?
         </h1>
 

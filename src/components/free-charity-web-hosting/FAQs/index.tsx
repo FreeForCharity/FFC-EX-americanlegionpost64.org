@@ -43,14 +43,13 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
         aria-expanded={isOpen}
       >
         <span
-          className={`flex-1 pr-3 font-[700] leading-[26px] transition-all duration-300 ease-in-out ${
+          className={`flex-1 pr-3 font-[700] leading-[26px] transition-all duration-300 ease-in-out cantata-font ${
             small
               ? `text-[18px] text-center ${isOpen ? 'text-[#0d7ff8]' : 'text-black'}`
               : isOpen
                 ? 'text-[22px] text-[#0D7FF8]'
                 : 'text-[18px] text-black'
           }`}
-          id="cantata-font"
         >
           {title}
         </span>
@@ -73,10 +72,9 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
       >
         <div
           ref={contentRef}
-          className={`px-4 pb-4 pt-2 font-[500] transition-colors duration-300 ${
+          className={`px-4 pb-4 pt-2 font-[500] transition-colors duration-300 raleway-font ${
             small ? 'text-[16px] leading-[26px]' : 'text-[18px] leading-[29px]'
           }`}
-          id="raleway-font"
         >
           {children}
         </div>
@@ -105,10 +103,7 @@ const AccordionLayout = () => {
     <div className="py-[40px] flex flex-col items-center gap-6 px-[0px]">
       <div className="w-[90%] md:w-[80%] mx-auto max-w-[1080px]">
         <div className="py-[24px]">
-          <h1
-            className="mt-[2px] mb-[12px] pb-[10px] text-[31px] font-[700] leading-[31px] text-[#0d7ff8] text-center"
-            id="cantata-font"
-          >
+          <h1 className="mt-[2px] mb-[12px] pb-[10px] text-[31px] font-[700] leading-[31px] text-[#0d7ff8] text-center cantata-font">
             FAQS
           </h1>
         </div>

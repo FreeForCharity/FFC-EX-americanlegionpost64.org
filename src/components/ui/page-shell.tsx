@@ -12,10 +12,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({ eyebrow, title, intro })
     <div aria-hidden="true" className="absolute inset-x-0 bottom-3 h-2 bg-[#b71c1c]" />
     <div className="relative mx-auto max-w-[1100px] px-6">
       {eyebrow ? (
-        <p
-          className="uppercase text-[#c8a04a] tracking-[0.25em] text-xs font-bold mb-3"
-          id="aria-font"
-        >
+        <p className="uppercase text-[#c8a04a] tracking-[0.25em] text-xs font-bold mb-3 aria-font">
           {eyebrow}
         </p>
       ) : null}
