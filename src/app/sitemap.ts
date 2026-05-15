@@ -4,7 +4,7 @@ import { newsPosts } from '@/data/news'
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://staging.americanlegionpost64.org'
+  const baseUrl = 'https://americanlegionpost64.org'
   const now = new Date()
   const staticRoutes = [
     '/',
