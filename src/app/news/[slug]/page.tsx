@@ -54,7 +54,7 @@ export default async function NewsPostPage({ params }: NewsPostPageProps) {
         intro={post.author ? `By ${post.author}` : undefined}
       />
       <main className="bg-white py-12 md:py-16">
-        <article className="mx-auto max-w-[820px] px-6">
+        <article className="mx-auto max-w-3xl px-6">
           {post.coverImage ? (
             /* eslint-disable-next-line @next/next/no-img-element */
             <img

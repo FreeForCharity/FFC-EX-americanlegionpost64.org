@@ -34,7 +34,7 @@ interface PageBodyProps {
 
 export const PageBody: React.FC<PageBodyProps> = ({ children, className = '' }) => (
   <main className={`bg-white py-12 md:py-16 ${className}`}>
-    <div className="mx-auto max-w-[900px] px-6 prose-content space-y-6 text-gray-800 leading-relaxed">
+    <div className="mx-auto max-w-3xl px-6 prose-content space-y-6 text-gray-800 leading-relaxed">
       {children}
     </div>
   </main>
