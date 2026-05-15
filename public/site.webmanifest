@@ -1,8 +1,8 @@
 {
-  "name": "",
-  "short_name": "",
-  "icons": [],
-  "theme_color": "#ffffff",
+  "name": "American Legion Post 64",
+  "short_name": "Post 64",
+  "icons": [{ "src": "/icon.svg", "type": "image/svg+xml", "sizes": "any" }],
+  "theme_color": "#0a2540",
   "background_color": "#ffffff",
   "display": "standalone"
 }
