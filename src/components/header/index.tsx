@@ -110,7 +110,7 @@ const Header: React.FC = () => {
                           href={item.path}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center px-3 py-2 text-[14px] text-white hover:text-[#c8a04a] transition-colors"
+                          className="flex items-center px-3 py-2 text-[14px] text-white hover:text-[#c8a04a] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c8a04a] rounded"
                         >
                           {item.label}
                         </a>
@@ -119,7 +119,7 @@ const Header: React.FC = () => {
                           href={item.path}
                           onClick={handleLinkClick}
                           aria-current={isActive(item.path) ? 'page' : undefined}
-                          className={`flex items-center px-3 py-2 text-[14px] transition-colors ${
+                          className={`flex items-center px-3 py-2 text-[14px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c8a04a] rounded ${
                             isActive(item.path)
                               ? 'text-[#c8a04a] border-b-2 border-[#c8a04a]'
                               : 'text-white hover:text-[#c8a04a]'
@@ -134,7 +134,7 @@ const Header: React.FC = () => {
                     <Link
                       href="/donate"
                       onClick={handleLinkClick}
-                      className="inline-flex items-center px-5 py-2 rounded-full bg-[#b71c1c] hover:bg-[#9b1414] text-white text-[14px] font-[700] uppercase tracking-wide transition-colors"
+                      className="inline-flex items-center px-5 py-2 rounded-full bg-[#b71c1c] hover:bg-[#9b1414] text-white text-[14px] font-[700] uppercase tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#b71c1c]"
                     >
                       Support Our Veterans
                     </Link>
@@ -146,7 +146,7 @@ const Header: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 text-white hover:text-[#c8a04a]"
+                className="lg:hidden p-2 text-white hover:text-[#c8a04a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c8a04a] rounded"
                 aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={isMobileMenuOpen ? 'true' : 'false'}
               >
@@ -183,7 +183,7 @@ const Header: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={handleLinkClick}
-                        className="block px-4 py-2 rounded text-sm font-[600] text-white hover:bg-[#0e3a6f]"
+                        className="block px-4 py-2 rounded text-sm font-[600] text-white hover:bg-[#0e3a6f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c8a04a]"
                       >
                         {item.label}
                       </a>
