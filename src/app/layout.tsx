@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s | American Legion Post 64',
   },
   description:
-    "American Legion Post 64 is Ahwatukee’s only local veterans’ organization — Veterans Helping Veterans while strengthening the community around us.",
+    "American Legion Post 64 is Ahwatukee's only local veterans' organization — Veterans Helping Veterans while strengthening the community around us.",
   keywords: [
     'American Legion',
     'Post 64',
@@ -57,21 +57,21 @@ export const metadata: Metadata = {
     siteName: 'American Legion Post 64',
     title: 'American Legion Post 64 | Ahwatukee, Phoenix, AZ',
     description:
-      "Ahwatukee’s only local veterans’ organization. Veterans Helping Veterans since 1919.",
+      "Ahwatukee's only local veterans' organization. Veterans Helping Veterans since 1919.",
     images: [
       {
-        url: ‘/og-image.png’,
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: ‘American Legion Post 64’,
+        alt: 'American Legion Post 64',
       },
     ],
   },
   twitter: {
-    card: ‘summary_large_image’,
-    title: ‘American Legion Post 64 | Ahwatukee’,
-    description: ‘Veterans Helping Veterans while strengthening the community around us.’,
-    images: [‘/og-image.png’],
+    card: 'summary_large_image',
+    title: 'American Legion Post 64 | Ahwatukee',
+    description: 'Veterans Helping Veterans while strengthening the community around us.',
+    images: ['/og-image.png'],
   },
   icons: {
     icon: [
