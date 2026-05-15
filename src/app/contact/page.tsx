@@ -71,10 +71,7 @@ export default function ContactPage() {
           <ul className="list-none p-0 space-y-4">
             {postInfo.leadership.map((p) => (
               <li key={p.name} className="bg-[#f7f3e7] border-l-4 border-[#c8a04a] p-5 rounded-r">
-                <p
-                  className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-1"
-                  id="aria-font"
-                >
+                <p className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-1 aria-font">
                   {p.title}
                 </p>
                 <p className="text-lg font-bold text-[#0a2647]">{p.name}</p>

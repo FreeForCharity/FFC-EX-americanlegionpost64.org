@@ -77,18 +77,16 @@ const Header: React.FC = () => {
                 </span>
                 <span className="flex flex-col leading-tight">
                   <span
-                    className={`font-[700] uppercase tracking-wide transition-all duration-300 ${
+                    className={`font-[700] uppercase tracking-wide transition-all duration-300 cinzel ${
                       isScrolled ? 'text-[13px]' : 'text-[15px]'
                     }`}
-                    id="cinzel"
                   >
                     American Legion
                   </span>
                   <span
-                    className={`text-[#c8a04a] transition-all duration-300 ${
+                    className={`text-[#c8a04a] transition-all duration-300 aria-font ${
                       isScrolled ? 'text-[11px]' : 'text-[13px]'
                     }`}
-                    id="aria-font"
                   >
                     Post 64 · Ahwatukee
                   </span>
@@ -110,7 +108,7 @@ const Header: React.FC = () => {
                           href={item.path}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center px-3 py-2 text-[14px] text-white hover:text-[#c8a04a] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c8a04a] rounded"
+                          className="flex items-center px-3 py-2 text-[14px] text-white hover:text-[#c8a04a] transition-colors"
                         >
                           {item.label}
                         </a>
@@ -119,7 +117,7 @@ const Header: React.FC = () => {
                           href={item.path}
                           onClick={handleLinkClick}
                           aria-current={isActive(item.path) ? 'page' : undefined}
-                          className={`flex items-center px-3 py-2 text-[14px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c8a04a] rounded ${
+                          className={`flex items-center px-3 py-2 text-[14px] transition-colors ${
                             isActive(item.path)
                               ? 'text-[#c8a04a] border-b-2 border-[#c8a04a]'
                               : 'text-white hover:text-[#c8a04a]'
@@ -134,7 +132,7 @@ const Header: React.FC = () => {
                     <Link
                       href="/donate"
                       onClick={handleLinkClick}
-                      className="inline-flex items-center px-5 py-2 rounded-full bg-[#b71c1c] hover:bg-[#9b1414] text-white text-[14px] font-[700] uppercase tracking-wide transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#b71c1c]"
+                      className="inline-flex items-center px-5 py-2 rounded-full bg-[#b71c1c] hover:bg-[#9b1414] text-white text-[14px] font-[700] uppercase tracking-wide transition-colors"
                     >
                       Support Our Veterans
                     </Link>
@@ -146,7 +144,7 @@ const Header: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 text-white hover:text-[#c8a04a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c8a04a] rounded"
+                className="lg:hidden p-2 text-white hover:text-[#c8a04a]"
                 aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
                 aria-expanded={isMobileMenuOpen ? 'true' : 'false'}
               >
@@ -183,7 +181,7 @@ const Header: React.FC = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={handleLinkClick}
-                        className="block px-4 py-2 rounded text-sm font-[600] text-white hover:bg-[#0e3a6f] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c8a04a]"
+                        className="block px-4 py-2 rounded text-sm font-[600] text-white hover:bg-[#0e3a6f]"
                       >
                         {item.label}
                       </a>

@@ -32,10 +32,7 @@ const EducationalSitesSection = () => {
     <div className="py-[91px] bg-[linear-gradient(180deg,#0068b7_0%,rgba(44,96,118,0.75)_100%),url('https://staging.freeforcharity.org/wp-content/uploads/2021/07/pexels-cottonbro-4064840.jpg')] bg-[#0f82af] bg-cover bg-center bg-no-repeat">
       <div className="w-[80%] mx-auto flex flex-col items-center">
         {/* Heading */}
-        <h2
-          className="text-[40px] font-[700] text-white text-center leading-[44px] mb-4 [font-variant:small-caps] tracking-[1px]"
-          id="lato-font"
-        >
+        <h2 className="text-[40px] font-[700] text-white text-center leading-[44px] mb-4 [font-variant:small-caps] tracking-[1px] lato-font">
           Educational Sites for
           <span className="text-[#e88d33]"> Everyone</span>
         </h2>
@@ -60,10 +57,7 @@ const EducationalSitesSection = () => {
 
               {/* Text */}
               <div className="flex-1">
-                <h3
-                  className="text-[24px] font-[700] text-white leading-[31px] pb-[10px]"
-                  id="faustina-font"
-                >
+                <h3 className="text-[24px] font-[700] text-white leading-[31px] pb-[10px] faustina-font">
                   {card.title}
                 </h3>
 
@@ -80,8 +74,7 @@ const EducationalSitesSection = () => {
                     transition-all duration-300 ease-in-out
                     shadow-md leading-[31px] font-[600]
                     hover:shadow-[0px_12px_18px_-6px_#f27022]
-                  "
-                  id="montserrat-font"
+                   montserrat-font"
                 >
                   <span className="transition-all duration-300 group-hover:translate-x-1">
                     Check Here!

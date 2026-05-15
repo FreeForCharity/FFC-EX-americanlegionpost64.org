@@ -11,16 +11,10 @@ const Index = () => {
       <div className="relative z-[5] w-[90%] max-w-[1300px] mx-auto flex flex-wrap items-start justify-between ">
         {/* Left Section */}
         <div className="w-full md:w-[58.8%] mb-8 md:mb-0">
-          <h1
-            className="mt-[60px] mb-[20px] font-[700] text-[40px] md:text-[50px] leading-[50px] md:leading-[65px] text-[#1a2e35]"
-            id="cantata-font"
-          >
+          <h1 className="mt-[60px] mb-[20px] font-[700] text-[40px] md:text-[50px] leading-[50px] md:leading-[65px] text-[#1a2e35] cantata-font">
             Free For Charity <br /> Domains
           </h1>
-          <p
-            id="raleway-font"
-            className="text-[18px] md:text-[20px] font-[600] leading-[28px] md:leading-[30px]"
-          >
+          <p className="raleway-font text-[18px] md:text-[20px] font-[600] leading-[28px] md:leading-[30px]">
             Welcome to Free For Charity Domains — a project of Free For Charity, providing free
             domains and hosting services to other non-profit organizations.
           </p>

@@ -9,10 +9,7 @@ const Index = () => {
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-[30px]">
           {/* Left Column: Heading */}
           <div className="text-center md:text-left md:mr-[35px]">
-            <h1
-              className="text-[42px] sm:text-[54px] md:text-[72px] font-[500] leading-[50px] sm:leading-[65px] md:leading-[83px] text-white"
-              id="cinzel"
-            >
+            <h1 className="text-[42px] sm:text-[54px] md:text-[72px] font-[500] leading-[50px] sm:leading-[65px] md:leading-[83px] text-white cinzel">
               Empower Charities with Free Domains
             </h1>
           </div>
@@ -21,8 +18,7 @@ const Index = () => {
           <div className="flex justify-center md:justify-start items-center mt-[25px] md:mt-0">
             <Link
               href="/free-for-charity-endowment-fund"
-              className="whitespace-nowrap px-[20px] sm:px-[24px] py-[10px] sm:py-[12px] hover:bg-gray-100 transition shadow-lg text-[#003566] !border-0 rounded-full text-[14px] font-[700] leading-[24px] bg-white"
-              id="fauna-font"
+              className="whitespace-nowrap px-[20px] sm:px-[24px] py-[10px] sm:py-[12px] hover:bg-gray-100 transition shadow-lg text-[#003566] !border-0 rounded-full text-[14px] font-[700] leading-[24px] bg-white fauna-font"
             >
               Support the Endowment
             </Link>

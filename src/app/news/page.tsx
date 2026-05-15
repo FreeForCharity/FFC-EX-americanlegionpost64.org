@@ -54,10 +54,7 @@ export default function NewsArchivePage() {
                     />
                   )}
                   <div className="p-6 flex flex-col flex-1">
-                    <p
-                      className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-2"
-                      id="aria-font"
-                    >
+                    <p className="uppercase text-[#b71c1c] tracking-[0.2em] text-xs font-bold mb-2 aria-font">
                       <time dateTime={post.date}>{formatPostDate(post.date)}</time>
                     </p>
                     <h2 className="text-xl md:text-2xl font-bold text-[#0a2647] mb-3 leading-snug">

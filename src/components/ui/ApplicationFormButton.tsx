@@ -89,12 +89,11 @@ const ApplicationFormButton: React.FC<ApplicationFormButtonProps> = ({
       <button
         onClick={openPopup}
         className={`
-          rounded-[20px] border-[5px] border-[#2A6682] flex items-center justify-center 
-          text-black font-[400] text-[25px] px-[28px] py-[16px] 
+          rounded-[20px] border-[5px] border-[#2A6682] flex items-center justify-center
+          text-black font-[400] text-[25px] px-[28px] py-[16px] lato-font
           hover:bg-[#2A6682] hover:text-white transition-all duration-300
           ${className}
         `}
-        id="lato-font"
       >
         {text}
       </button>

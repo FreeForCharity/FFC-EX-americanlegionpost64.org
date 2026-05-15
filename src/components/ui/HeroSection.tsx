@@ -34,8 +34,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               {heading}
             </h1>
             <p
-              className="font-[500] w-full mt-[11px]"
-              id="lato-font"
+              className="font-[500] w-full mt-[11px] lato-font"
               style={{
                 fontSize: fontSize ? `${fontSize}px` : '22px',
                 lineHeight: lineHeight ? `${lineHeight}px` : '31px',

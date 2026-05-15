@@ -20,10 +20,7 @@ const AddressCard: React.FC<AddressCardProps> = ({ imageSrc, heading, descriptio
       <h3 className="text-[24px] font-[600] leading-[31px]">{heading}</h3>
 
       {/* Description - supports line breaks */}
-      <p
-        className="text-[18px] font-[600] leading-[24px] text-[#666] whitespace-pre-line"
-        id="lato-font"
-      >
+      <p className="text-[18px] font-[600] leading-[24px] text-[#666] whitespace-pre-line lato-font">
         {description}
       </p>
     </div>
