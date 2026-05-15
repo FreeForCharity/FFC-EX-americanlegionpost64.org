@@ -29,8 +29,8 @@ export default function TermsOfService() {
         </h2>
         <p className="text-[14px] text-[#666] pb-[16px] leading-[24px] font-[500]">
           The Site provides information about Post 64, its officers, events, news, and ways to
-          support local veterans. Information is provided for community and educational purposes
-          and is not legal, medical, or financial advice.
+          support local veterans. Information is provided for community and educational purposes and
+          is not legal, medical, or financial advice.
         </p>
 
         <h2 className="text-[22px] text-[#333] pt-[12px] pb-[8px] leading-[1.2em] font-[600]">
@@ -66,8 +66,8 @@ export default function TermsOfService() {
           Donations and contributions
         </h2>
         <p className="text-[14px] text-[#666] pb-[16px] leading-[24px] font-[500]">
-          Donations to Post 64 support local veterans, families, and community programs. The Post
-          is a 501(c)(19) veterans organization; consult your tax advisor regarding deductibility.
+          Donations to Post 64 support local veterans, families, and community programs. The Post is
+          a 501(c)(19) veterans organization; consult your tax advisor regarding deductibility.
           Online donation flows link to external processors that have their own terms.
         </p>
 
@@ -75,9 +75,9 @@ export default function TermsOfService() {
           No warranty
         </h2>
         <p className="text-[14px] text-[#666] pb-[16px] leading-[24px] font-[500]">
-          The Site is provided &ldquo;as is&rdquo; without warranty of any kind. We make
-          reasonable efforts to keep event information accurate, but please confirm dates and
-          locations directly with the Post before traveling.
+          The Site is provided &ldquo;as is&rdquo; without warranty of any kind. We make reasonable
+          efforts to keep event information accurate, but please confirm dates and locations
+          directly with the Post before traveling.
         </p>
 
         <h2 className="text-[22px] text-[#333] pt-[12px] pb-[8px] leading-[1.2em] font-[600]">
@@ -100,8 +100,8 @@ export default function TermsOfService() {
           Changes
         </h2>
         <p className="text-[14px] text-[#666] pb-[16px] leading-[24px] font-[500]">
-          We may update these Terms occasionally. Continued use of the Site after changes are
-          posted constitutes acceptance of the revised Terms.
+          We may update these Terms occasionally. Continued use of the Site after changes are posted
+          constitutes acceptance of the revised Terms.
         </p>
 
         <h2 className="text-[22px] text-[#333] pt-[12px] pb-[8px] leading-[1.2em] font-[600]">
