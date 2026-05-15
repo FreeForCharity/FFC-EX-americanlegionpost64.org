@@ -9,7 +9,7 @@ import LatestNews from '@/components/home-page/latest-news'
 
 const HomePage = () => {
   return (
-    <main>
+    <main id="main">
       <Post64Hero />
       <MissionPreview />
       <LeadershipPreview />
