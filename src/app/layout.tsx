@@ -19,7 +19,7 @@ import {
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://staging.americanlegionpost64.org'),
+  metadataBase: new URL('https://americanlegionpost64.org'),
   title: {
     default: 'American Legion Post 64 | Ahwatukee, Phoenix, AZ',
     template: '%s | American Legion Post 64',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    url: 'https://staging.americanlegionpost64.org/',
+    url: 'https://americanlegionpost64.org/',
     siteName: 'American Legion Post 64',
     title: 'American Legion Post 64 | Ahwatukee, Phoenix, AZ',
     description:
