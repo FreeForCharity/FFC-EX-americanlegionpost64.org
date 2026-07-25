@@ -3,10 +3,10 @@
     "collect": {
       "staticDistDir": "./out",
       "url": [
-        "http://localhost/index.html",
-        "http://localhost/cookie-policy.html",
-        "http://localhost/privacy-policy.html",
-        "http://localhost/terms-of-service.html"
+        "http://localhost/",
+        "http://localhost/cookie-policy/",
+        "http://localhost/privacy-policy/",
+        "http://localhost/terms-of-service/"
       ],
       "numberOfRuns": 3
     },
@@ -16,10 +16,30 @@
     },
     "assert": {
       "assertions": {
-        "categories:performance": ["warn", { "minScore": 0.55 }],
-        "categories:accessibility": ["warn", { "minScore": 0.9 }],
-        "categories:best-practices": ["warn", { "minScore": 0.65 }],
-        "categories:seo": ["warn", { "minScore": 0.95 }]
+        "categories:performance": [
+          "warn",
+          {
+            "minScore": 0.55
+          }
+        ],
+        "categories:accessibility": [
+          "warn",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "categories:best-practices": [
+          "warn",
+          {
+            "minScore": 0.65
+          }
+        ],
+        "categories:seo": [
+          "warn",
+          {
+            "minScore": 0.95
+          }
+        ]
       }
     }
   }
