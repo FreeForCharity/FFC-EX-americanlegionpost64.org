@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "audit:high": "npm audit --omit=dev --audit-level=high",
     "dev": "next dev --turbopack",
     "build": "next build",
     "preview": "npx serve -s out -l 3000",
