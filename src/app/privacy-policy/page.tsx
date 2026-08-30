@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { PageHeader, PageBody } from '@/components/ui/page-shell'
 import { postInfo } from '@/lib/post-info'
 
@@ -144,9 +145,9 @@ export default function PrivacyPolicy() {
             EEA, the UK, and Switzerland, Google Analytics runs cookie-free until you accept.
             Everywhere else, including the United States, analytics cookies are set from your first
             pageview. Our{' '}
-            <a href="/cookie-policy" className="text-[#b71c1c] font-semibold">
+            <Link href="/cookie-policy" className="text-[#b71c1c] font-semibold">
               Cookie Policy
-            </a>{' '}
+            </Link>{' '}
             describes this in detail.
           </p>
           <p>
