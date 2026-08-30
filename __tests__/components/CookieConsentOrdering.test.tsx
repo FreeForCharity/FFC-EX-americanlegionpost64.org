@@ -11,6 +11,7 @@ import { render, waitFor } from '@testing-library/react'
 // requireActual then evaluates the component in the SAME module registry
 // (no jest.resetModules — that would hand the component a second copy of
 // React and break its hooks).
+const ORIGINAL_GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID = 'G-TEST1234567'
 
 const CookieConsent = (
@@ -20,7 +21,15 @@ const CookieConsent = (
 ).default
 
 afterAll(() => {
-  delete process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  // Restore the environment exactly as found (delete if it was unset), and
+  // purge the module cache so no later suite in this worker can observe a
+  // component module that was evaluated under the test override.
+  if (ORIGINAL_GA_MEASUREMENT_ID === undefined) {
+    delete process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  } else {
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID = ORIGINAL_GA_MEASUREMENT_ID
+  }
+  jest.resetModules()
 })
 
 const GA_SCRIPT_SELECTOR = 'script[src*="googletagmanager.com/gtag"]'
