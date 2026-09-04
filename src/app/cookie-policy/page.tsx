@@ -52,8 +52,8 @@ export default function CookiePolicy() {
               Remember your cookie consent preferences
             </li>
             <li className="text-[14px] text-[#666] leading-[24px] font-[500]">
-              Understand how you use our website and analyze traffic (in the EEA, the UK, and
-              Switzerland, only after you consent — see Section 3.3)
+              Understand how you use our website and analyze traffic (only after you consent,
+              wherever you are — see Section 3.3)
             </li>
             <li className="text-[14px] text-[#666] leading-[24px] font-[500]">
               Improve our website and user experience
@@ -215,11 +215,14 @@ export default function CookiePolicy() {
               <strong>When we ask permission first</strong>
             </p>
             <p className="text-sm text-[#666] mb-2">
-              If you are in the European Economic Area, the United Kingdom, or Switzerland, Google
-              Analytics sets <strong>no cookies and collects no identifiers</strong> until you
-              accept. It still counts your visit in an aggregate, cookie-free way so we know how
-              many people used the site — that measurement cannot be tied back to you or to your
-              next visit.
+              We apply the strictest setting to everyone: no matter where in the world you are,
+              Google Analytics sets{' '}
+              <strong>
+                no analytics or advertising cookies and collects no measurement identifiers
+              </strong>{' '}
+              until you accept. It still counts your visit in an aggregate, cookie-free way so we
+              know how many people used the site — that measurement cannot be tied back to you or to
+              your next visit.
             </p>
             <p className="text-sm text-[#666] mb-2">
               There is no country in which analytics cookies are set before you choose. You can turn
