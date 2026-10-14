@@ -80,7 +80,7 @@ export const testConfig = {
    */
   animatedNumbers: {
     sectionHeading: '',
-    statistics: [],
+    statistics: [] as { description: string; value: string }[],
   },
 
   /**
